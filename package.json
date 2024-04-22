@@ -14,14 +14,14 @@
     "oslo": "^1.2.0",
     "react": "^18",
     "react-dom": "^18",
-    "zod": "^3.23.0"
+    "zod": "^3.23.3"
   },
   "devDependencies": {
     "typescript": "^5",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
-    "eslint": "^8",
+    "eslint": "^9.1.1",
     "eslint-config-next": "14.2.1"
   }
 }

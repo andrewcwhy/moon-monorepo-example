@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Contact Us",
+  title: "About Us",
   description: "",
 };
 
-export default async function ContactPage() {
+export default async function AboutPage() {
     return (
         <>
         </>
