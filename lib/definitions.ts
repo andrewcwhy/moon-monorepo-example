@@ -19,11 +19,10 @@ const passwordSchema = z.string()
   .regex(/[^\s]/, "Password cannot contain only spaces");
 
   // Schema for signing up
-export const SignUpSchema = z.object({
+export const signupSchema = z.object({
   username: usernameSchema,
   password: passwordSchema
     .regex(/[A-Z]/, "Password must contain at least one uppercase letter")
-    regex(/[a-zA-Z]/, { message: 'Contain at least one letter.' })
     .regex(/[0-9]/, "Password must contain at least one digit")
     .regex(/[\W_]/, "Password must contain at least one special character"),
 })
