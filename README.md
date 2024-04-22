@@ -11,7 +11,7 @@ yarn dev
 # or
 pnpm dev
 # or
-bun dev
+bun run dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
@@ -34,3 +34,22 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+
+# Key Features
+
+- Next.js & React: Harness the power of Next.js and React for efficient server-side rendering and interactive UI.
+- TypeScript: Guarantee type safety and elevate code quality with TypeScript.
+- Auth.js V5: Implement advanced authentication features for secure authentication flows.
+- Bcryptjs: Ensure secure password hashing with Bcrypt for heightened security.
+- Zod: Ensure data validation with Zod's schema-first approach.
+- Server Actions: Implement server actions for authentication flows and providers.
+
+# Tech Stack
+
+- TypeScript
+- React
+- Next.js
+- Auth.js V5
+- Bcryptjs
+- Zod
