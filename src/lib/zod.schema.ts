@@ -15,7 +15,7 @@ const emailSchema = z.string()
 const passwordSchema = z.string()
   .min(1, "Password is required")
   .min(8, "Password must contain at least 8 characters")
-  .max(255, "Password must not exceed 255 characters")
+  .max(64, "Password must not exceed 64 characters")
   .regex(/[^\s]/, "Password cannot contain only spaces");
 
   // Schema for signing up
