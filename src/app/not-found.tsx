@@ -1,5 +1,5 @@
-import Link from 'next/link'
- 
+import Link from "next/link";
+
 export default function NotFound() {
   return (
     <div>
@@ -9,5 +9,5 @@ export default function NotFound() {
       <p>You can either return to the previous page or visit our homepage.</p>
       <Link href="/">Return Home</Link>
     </div>
-  )
+  );
 }

@@ -1,8 +1,8 @@
 return (
-    <form>
-        <li>
-            <label></label>
-            <input />
-        </li>
-    </form>
-)
+  <form>
+    <li>
+      <label></label>
+      <input />
+    </li>
+  </form>
+);
