@@ -24,31 +24,29 @@ This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-opti
 
 To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+-   [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+-   [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
-
 # Key Features
 
-- Next.js & React: Harness the power of Next.js and React for efficient server-side rendering and interactive UI.
-- TypeScript: Guarantee type safety and elevate code quality with TypeScript.
-- Auth.js V5: Implement advanced authentication features for secure authentication flows.
-- Bcryptjs: Ensure secure password hashing with Bcrypt for heightened security.
-- Zod: Ensure data validation with Zod's schema-first approach.
-- Server Actions: Implement server actions for authentication flows and providers.
+-   ESLint: A tool for identifying and fixing code errors, maintaining code consistency, and enforcing coding standards.
+-   Lucia: An auth library written in TypeScript that abstracts away the complexity of handling sessions.
+-   Next.js & React: Harness the power of Next.js and React for efficient server-side rendering and interactive UI.
+-   Oslo: Provides basic utilities used by other modules.
+-   Prettier: An opinionated code formatter that helps maintain a consistent code style across your project.
+-   React: A JavaScript library for building user interfaces.
+-   TypeScript: Guarantee type safety and elevate code quality with TypeScript.
+-   Zod: Ensure data validation with Zod's schema-first approach.
 
 # Tech Stack
 
-- TypeScript
-- React
-- Next.js
-- Auth.js V5
-- Bcryptjs
-- Zod
+-   ESLint
+-   Lucia
+-   Next.js
+-   Oslo
+-   Prettier
+-   React
+-   TypeScript
+-   Zod
