@@ -7,7 +7,7 @@ const usernameSchema = z
     .min(6, "Username must contain at least 6 characters")
     .max(32, "Username must not exceed 32 characters")
     .regex(
-        /^[a-z0-9_]+$/,
+        /^[a-zA-Z0-9_]+$/,
         "Username can only contain letters, numbers, and underscores"
     )
 
