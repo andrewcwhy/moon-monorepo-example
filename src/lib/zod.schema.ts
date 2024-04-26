@@ -5,10 +5,7 @@ const usernameSchema = z
     .string()
     .min(4, "Username must contain at least 6 characters")
     .max(32, "Username cannot exceed 32 characters")
-    .regex(
-        /^[a-zA-Z0-9_]+$/,
-        "Username can only contain letters, numbers, and underscores"
-    )
+    .regex(/^[a-zA-Z0-9]+$/, "Username can only contain letters and numbers")
 
 // Common validation rules for email
 const emailSchema = z
@@ -33,7 +30,7 @@ const passwordSchema = z
 export const signupSchema = z.object({
     username: usernameSchema,
     email: emailSchema,
-    password: passwordSchema,
+    password: z.string().min(8).max(64),
 })
 
 // Schema for signing in

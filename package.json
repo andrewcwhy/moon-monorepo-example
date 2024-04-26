@@ -1,33 +1,4 @@
 {
-<<<<<<< HEAD
-    "name": "my-bun-app",
-    "version": "0.1.0",
-    "private": true,
-    "scripts": {
-        "dev": "next dev --turbo",
-        "build": "next build",
-        "start": "next start",
-        "lint": "next lint"
-    },
-    "dependencies": {
-        "eslint-config-prettier": "^9.1.0",
-        "lucia": "^3.2.0",
-        "next": "^14.2.3",
-        "oslo": "^1.2.0",
-        "react": "^18",
-        "react-dom": "^18",
-        "zod": "^3.23.4"
-    },
-    "devDependencies": {
-        "@types/node": "^20",
-        "@types/react": "^18",
-        "@types/react-dom": "^18",
-        "eslint": "^9.1.1",
-        "eslint-config-next": "14.2.3",
-        "prettier": "3.2.5",
-        "typescript": "^5"
-    }
-=======
   "name": "my-bun-app",
   "version": "0.1.0",
   "private": true,
@@ -40,10 +11,10 @@
   "dependencies": {
     "eslint-config-prettier": "^9.1.0",
     "lucia": "^3.2.0",
-    "next": "^14.2.2",
+    "next": "^14.2.3",
     "oslo": "^1.2.0",
-    "react": "^18.3.0",
-    "react-dom": "^18.3.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
     "zod": "^3.23.4"
   },
   "devDependencies": {
@@ -55,5 +26,4 @@
     "prettier": "3.2.5",
     "typescript": "^5.4.5"
   }
->>>>>>> c310e1a61c21d19df35cb6b10d5f11d209c82320
 }
