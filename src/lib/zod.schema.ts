@@ -26,15 +26,15 @@ const passwordSchema = z
     .min(1, "Password is required")
     .min(8, "Password must contain at least 8 characters")
     .max(64, "Password must not exceed 64 characters")
-    .regex(/[^\s]/, "Password cannot contain only spaces")
+    .regex(/[^\s]/, "Please create a more complex password")
 
 // Schema for signing up
-export const signupSchema = z.object({
+export const SignUpSchema = z.object({
     username: usernameSchema,
-    password: passwordSchema
-        .regex(/[A-Z]/, "Password must contain at least one uppercase letter")
-        .regex(/[0-9]/, "Password must contain at least one digit")
-        .regex(/[\W_]/, "Password must contain at least one special character"),
+    password: passwordSchema.regex(
+        /^(?=.*[A-Z])(?=.*\d)(?=.*[\W_\s]).$/,
+        "Password must contain at least one uppercase letter, one digit, and one special character"
+    ),
 })
 
 // Schema for signing in
