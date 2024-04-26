@@ -3,11 +3,10 @@ import { z } from "zod"
 // Common validation rules for username
 const usernameSchema = z
     .string()
-    .min(1, "Username is required")
-    .min(6, "Username must contain at least 6 characters")
-    .max(32, "Username must not exceed 32 characters")
+    .min(4, "Username must contain at least 6 characters")
+    .max(32, "Username cannot exceed 32 characters")
     .regex(
-        /^[a-z0-9_]+$/,
+        /^[a-zA-Z0-9_]+$/,
         "Username can only contain letters, numbers, and underscores"
     )
 
@@ -23,36 +22,36 @@ const emailSchema = z
 // Common validation rules for password
 const passwordSchema = z
     .string()
-    .min(1, "Password is required")
     .min(8, "Password must contain at least 8 characters")
-    .max(64, "Password must not exceed 64 characters")
-    .regex(/[^\s]/, "Please create a more complex password")
+    .max(64, "Password cannot exceed 64 characters")
+    .regex(
+        /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[\W])$/,
+        "Password must contain at least one uppercase letter, one digit, and one special character"
+    )
 
 // Schema for signing up
-export const SignUpSchema = z.object({
+export const signupSchema = z.object({
     username: usernameSchema,
-    password: passwordSchema.regex(
-        /^(?=.*[A-Z])(?=.*\d)(?=.*[\W_\s]).$/,
-        "Password must contain at least one uppercase letter, one digit, and one special character"
-    ),
+    email: emailSchema,
+    password: passwordSchema,
 })
 
 // Schema for signing in
-export const SignInSchema = z.object({
-    username: usernameSchema,
+export const signinSchema = z.object({
+    email: emailSchema,
     password: passwordSchema,
 })
 
 // Schema for resetting password data validation
-export const ResetPasswordSchema = z
+export const resetPasswordSchema = z
     .object({
-        password: z.string().min(8),
-        confirmPassword: z.string().min(8),
-        newPassword: z.string().min(8),
+        password: z.string().min(8).max(64),
+        newPassword: passwordSchema,
+        confirmPassword: z.string().min(8).max(64),
         logoutFromOtherDevices: z.boolean(),
     })
     .refine((data) => data.password === data.confirmPassword, {
-        message: "Passwords do not match",
+        message: "Passwords do not match. Please re-enter your password",
         path: ["confirmPassword"],
     })
     .refine((data) => data.newPassword !== data.password, {
