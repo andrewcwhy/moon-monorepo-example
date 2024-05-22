@@ -1,11 +1,21 @@
 import { z } from "zod"
 
+// Common validation rules
+const commonValidation = {
+    age: z.number(),
+    confirmation: z.boolean(),
+    fullName: z.string(),
+    username: z.string().min(4).max(32),
+    email: z.string().max(255).email(),
+    password: z.string().min(8).max(64),
+}
+
 // Common validation rules for username
 const usernameSchema = z
     .string()
-    .min(4, "Username must contain at least 6 characters")
+    .min(4, "Username must contain at least 4 characters")
     .max(32, "Username cannot exceed 32 characters")
-    .regex(/^[a-zA-Z0-9]+$/, "Username can only contain letters and numbers")
+    .regex(/^[a-z0-9_]+$/, "Username can only contain letters and numbers")
 
 // Common validation rules for email
 const emailSchema = z
@@ -26,26 +36,35 @@ const passwordSchema = z
         "Password must contain at least one uppercase letter, one digit, and one special character"
     )
 
-// Schema for signing up
 export const signupSchema = z.object({
     username: usernameSchema,
     email: emailSchema,
-    password: z.string().min(8).max(64),
+    password: passwordSchema,
 })
 
-// Schema for signing in
 export const signinSchema = z.object({
+    email: commonValidation.email,
+    password: commonValidation.password,
+})
+
+export const contactSchema = z.object({
+    name: commonValidation.fullName.optional(),
     email: emailSchema,
-    password: passwordSchema,
+    subject: z.string().min(1),
+    message: z.string().min(10).max(2000),
+})
+
+export const userDeletionSchema = z.object({
+    deleteAccount: commonValidation.confirmation,
 })
 
 // Schema for resetting password data validation
 export const resetPasswordSchema = z
     .object({
-        password: z.string().min(8).max(64),
+        password: commonValidation.password,
         newPassword: passwordSchema,
-        confirmPassword: z.string().min(8).max(64),
-        logoutFromOtherDevices: z.boolean(),
+        confirmPassword: commonValidation.password,
+        logoutFromOtherDevices: commonValidation.confirmation,
     })
     .refine((data) => data.password === data.confirmPassword, {
         message: "Passwords do not match. Please re-enter your password",
