@@ -1,7 +1,5 @@
 {
-	"name": "monorepo-monorepo",
-  "description": "",
-  "author": "",
+	"name": "root",
 	"version": "0.0.0",
 	"private": true,
 	"workspaces": ["packages/*", "website"],
@@ -16,5 +14,5 @@
 		"@types/bun": "^1.2.10",
 		"typescript": "^5.8.3"
 	},
-  "trustedDependencies": ["@moonrepo/cli"]
+	"trustedDependencies": ["@moonrepo/cli"]
 }

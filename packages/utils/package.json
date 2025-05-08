@@ -1,0 +1,14 @@
+{
+    "name": "@example/types",
+    "description": "An example types package.",
+    "files": ["dist"],
+    "homepage": "https://github.com/andrewcwhy/moonrepo-monorepo-example#readme",
+    "keywords": ["types", "typescript"],
+    "license": "MIT",
+    "repository": {
+		"type": "git",
+		"url": "https://github.com/andrewcwhy/moonrepo-monorepo-example.git",
+		"directory": "packages/types"
+	},
+    "type": "module"
+}
