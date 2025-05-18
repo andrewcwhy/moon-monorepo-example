@@ -1,0 +1,16 @@
+{
+	"name": "core",
+	"version": "",
+	"description": "",
+	"author": "",
+	"files": ["dist"],
+	"keywords": ["core", "typescript"],
+	"license": "",
+	"type": "module",
+	"scripts": {
+		"build": "tsdown"
+	},
+	"devDependencies": {
+		"tsdown": "^0.11.2"
+	}
+}
